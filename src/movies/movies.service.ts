@@ -34,10 +34,10 @@ export class MoviesService {
     };
   }
 
-  findAll(query) {
+  findAll(query = null) {
     const arrayMovies = [];
 
-    if (query.duration) {
+    if (query?.duration) {
       mockDbMovies.movies.map((item) => {
         if (Number(item.runtime) === Number(query.duration)) {
           arrayMovies.push(item);
@@ -47,7 +47,7 @@ export class MoviesService {
       return arrayMovies;
     }
 
-    if (query.genres) {
+    if (query?.genres) {
       // eslint-disable-next-line prettier/prettier
       const queryValue = query.genres.charAt(0).toUpperCase() + query.genres.slice(1)
 

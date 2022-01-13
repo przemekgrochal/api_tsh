@@ -1,5 +1,5 @@
 export class MoviesModel {
-  id: number | string;
+  id?: number | string;
   title: string;
   year: string | number;
   runtime: number | string;

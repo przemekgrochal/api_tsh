@@ -18,8 +18,14 @@ export class MoviesController {
 
   @Get('/movies')
   findAll(@Req() request) {
-    const { query } = request;
-    return this.moviesService.findAll(query);
+    let queryRequest = null;
+
+    if (request !== null) {
+      const { query } = request;
+      queryRequest = query;
+    }
+
+    return this.moviesService.findAll(queryRequest);
   }
 
   @Get('/movies/:id')

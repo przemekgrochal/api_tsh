@@ -39,6 +39,8 @@ $ npm run test:cov
 ## Testing API
 - GET http://localhost:3000/movies RETURN ALL MOVIES
 - GET http://localhost:3000/movies/{id} RETURN MOVIE BY ID
+- GET http://localhost:3000/movies?duration={} RETURN MOVIE BY DURATIONS
+- GET http://localhost:3000/movies?GENRES={} RETURN MOVIE BY GENRES
 
 - POST http://localhost:3000/movies/create CREATE MOVIE AND RETURN NEW MOVIE WITCH ARRAY OF MOVIES
 {
